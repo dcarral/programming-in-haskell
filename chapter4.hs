@@ -21,3 +21,8 @@ halve xs = (take half xs, drop half xs)
 -- (a) Using a conditional expression:
 safetail_conditional :: [a] -> [a]
 safetail_conditional xs = if null xs then xs else tail xs
+
+-- (b) Using guarded equations:
+safetail_guarded :: [a] -> [a]
+safetail_guarded xs | null xs = []
+                    | otherwise = tail xs
