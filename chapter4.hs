@@ -26,3 +26,8 @@ safetail_conditional xs = if null xs then xs else tail xs
 safetail_guarded :: [a] -> [a]
 safetail_guarded xs | null xs = []
                     | otherwise = tail xs
+
+-- (c) Using pattern matching:
+safetail_pattern :: [a] -> [a]
+safetail_pattern [] = []
+safetail_pattern (x:xs) = xs
