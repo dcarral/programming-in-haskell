@@ -64,3 +64,15 @@ safetail_pattern (x:xs) = xs
 
   a || b = if a then b else False
 -}
+
+{- Exercise 5:
+  Do the same for the following version, and note the difference in the number of conditional expressions required:
+
+  True && True = True
+  _ && _ = False
+
+  a || b = if a then
+             if b then True else False
+           else
+             False
+-}
