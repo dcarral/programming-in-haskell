@@ -33,7 +33,8 @@ safetail_pattern [] = []
 safetail_pattern (x:xs) = xs
 
 {- Exercise 3:
-  In a similar way to &&, show how the logical disjunction operator || can be defined in four different ways using pattern matching.
+  In a similar way to &&, show how the logical disjunction operator || can be
+  defined in four different ways using pattern matching.
 
   (1)
   True || True = True
@@ -52,4 +53,14 @@ safetail_pattern (x:xs) = xs
   (4)
   b || c  | b == c = b
           | otherwise = True
+-}
+
+{- Exercise 4:
+  Redefine the following version of the conjuntion operator using conditional
+  expressions rather than pattern matching:
+
+  True && b = b
+  False && _ = False
+
+  a || b = if a then b else False
 -}
