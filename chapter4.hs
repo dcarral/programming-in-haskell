@@ -31,3 +31,25 @@ safetail_guarded xs | null xs = []
 safetail_pattern :: [a] -> [a]
 safetail_pattern [] = []
 safetail_pattern (x:xs) = xs
+
+{- Exercise 3:
+  In a similar way to &&, show how the logical disjunction operator || can be defined in four different ways using pattern matching.
+
+  (1)
+  True || True = True
+  True || False = True
+  False || True = True
+  False || False = False
+
+  (2)
+  False || False = False
+  _ || _ = True
+
+  (3)
+  True || _ = True
+  False || b = b
+
+  (4)
+  b || c  | b == c = b
+          | otherwise = True
+-}
